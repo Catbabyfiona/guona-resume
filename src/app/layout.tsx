@@ -4,27 +4,25 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: '陈思远 | 资深前端工程师',
+    default: '郭娜 | 品牌市场总监',
     template: '%s | 简历',
   },
   description:
-    '8年前端开发经验，专注于现代Web技术栈。曾主导多个大型项目的架构设计，在性能优化、团队协作和技术创新方面有丰富实践经验。',
+    '15年品牌战略规划与企业综合管理经验，横跨文旅、科技、消费、投资等多行业，曾任上市筹备公司核心高管。精通品牌整合营销、企业顶层设计、上市辅导与资本对接。',
   keywords: [
-    '前端工程师',
-    'React',
-    'Next.js',
-    'Vue',
-    'TypeScript',
+    '品牌总监',
+    '市场总监',
+    '品牌战略',
+    '整合营销',
+    '郭娜',
     '个人简历',
-    'Web开发',
   ],
-  authors: [{ name: '陈思远' }],
+  authors: [{ name: '郭娜' }],
   generator: 'Coze Code',
   openGraph: {
-    title: '陈思远 | 资深前端工程师',
-    description: '8年前端开发经验，专注于现代Web技术栈',
-    url: 'https://siyuanchen.dev',
-    siteName: '陈思远简历',
+    title: '郭娜 | 品牌市场总监',
+    description: '15年品牌战略规划与企业综合管理经验',
+    siteName: '郭娜简历',
     locale: 'zh_CN',
     type: 'website',
   },
