@@ -22,9 +22,9 @@ const resumeData = {
   ],
   stats: [
     { value: "15+", label: "年经验" },
-    { value: "6+", label: "家公司" },
     { value: "千万级", label: "标杆项目" },
-    { value: "AI+", label: "效率提升" }
+    { value: "5000万+", label: "年营业额" },
+    { value: "187万+", label: "互动曝光" }
   ],
   experience: [
     {
