@@ -295,12 +295,22 @@ export default function ResumePage() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[var(--gold)]/3 blur-3xl" />
         
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <div className="animate-fade-in mb-6">
-            <p className="text-sm tracking-[0.3em] uppercase text-[var(--gold)] mb-4">
+          {/* 头像 */}
+          <div className="animate-fade-in mb-8">
+            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-[var(--gold)]/30 shadow-xl">
+              <img 
+                src="/avatar.jpg" 
+                alt={resumeData.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="animate-fade-in mb-4">
+            <p className="text-sm tracking-[0.3em] uppercase text-[var(--gold)]">
               {resumeData.tagline}
             </p>
           </div>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 animate-fade-in-up">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-4 animate-fade-in-up">
             {resumeData.name}
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up delay-200">
