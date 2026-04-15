@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { Mail, Phone, MapPin, Calendar, ChevronDown, Sparkles, FileText, Video, Cpu, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, ChevronDown, Sparkles, FileText, Video, ArrowRight, Briefcase } from "lucide-react";
 
 // 简历数据 - 郭娜
 const resumeData = {
@@ -19,7 +18,7 @@ const resumeData = {
     "上市辅导与资本对接",
     "IP资产孵化与内容创新",
     "跨界整合与项目管理",
-    "AI工具赋能效率提升"
+    "AI工具应用"
   ],
   stats: [
     { value: "15+", label: "年经验" },
@@ -71,6 +70,28 @@ const resumeData = {
       highlights: ["整合营销", "品牌策略", "活动执行", "客户管理"]
     }
   ],
+  projects: [
+    {
+      name: "阖家燕品牌战略体系打造",
+      description: "完成全新阖家燕品牌从0到1的战略体系打造，制定品牌定位、包装策略、推广策略，拓展品牌推广渠道，策划公众营销事件。",
+      tags: ["品牌定位", "包装设计", "营销策划", "渠道拓展"]
+    },
+    {
+      name: "「醉美老板娘」国潮好酒社会化传播",
+      description: "将传统白酒与「国潮文化」结合，打造差异化品牌定位。策划「醉美老板娘」社会化事件，显著提升品牌在目标人群中的渗透率与知名度。",
+      tags: ["国潮IP", "事件营销", "社会化传播", "品牌升级"]
+    },
+    {
+      name: "农副产品自媒体矩阵与扶贫项目",
+      description: "打造农业类短视频内容体系，运营微信公众号、抖音、微博等账号。7天内销售22万斤大米，销售额达150万元，消化当地村当年1/3产量。",
+      tags: ["内容矩阵", "短视频运营", "直播带货", "扶贫项目"]
+    },
+    {
+      name: "蒙牛真果粒酸奶新品上市整合营销",
+      description: "围绕蒙牛真果粒酸奶新品，策划线上线下整合营销活动（明星见面会、粉丝季、大型巡展、网红直播等），提升产品市场占有率。",
+      tags: ["新品上市", "整合营销", "KOL合作", "线下活动"]
+    }
+  ],
   education: [
     {
       school: "对外经济贸易大学",
@@ -81,8 +102,7 @@ const resumeData = {
   skills: {
     "核心能力": ["品牌战略与整合营销", "企业战略与顶层设计", "上市辅导与资本对接", "IP资产孵化与内容创新"],
     "专业技能": ["品牌定位与重塑", "整合营销策划", "IP孵化运营", "危机公关处理", "团队建设管理"],
-    "AI工具应用": ["AI生成文案策划", "AI图像创作", "AI视频制作", "AI数据分析", "AI效率工具链"],
-    "工具技能": ["PPT / Word / Excel", "品牌数据分析", "项目管理", "预算管理"]
+    "工具技能": ["PPT / Word / Excel", "品牌数据分析", "项目管理", "预算管理", "AI工具应用"]
   },
   portfolio: [
     {
@@ -239,6 +259,22 @@ function PortfolioCard({ title, subtitle, description, type, tags, link, pwd }: 
   );
 }
 
+function ProjectCard({ name, description, tags }: { name: string; description: string; tags: string[] }) {
+  return (
+    <div className="group p-8 bg-card border border-border hover:border-[var(--gold)] transition-all duration-500">
+      <h4 className="font-serif text-lg mb-3 group-hover:text-[var(--gold)] transition-colors">{name}</h4>
+      <p className="text-sm text-muted-foreground leading-relaxed mb-6">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag, i) => (
+          <span key={i} className="text-xs px-3 py-1 border border-border/50 text-muted-foreground">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ResumePage() {
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -256,7 +292,7 @@ export default function ResumePage() {
         }
       });
 
-      const sections = ["about", "experience", "skills", "portfolio", "education", "contact"];
+      const sections = ["about", "experience", "skills", "projects", "portfolio", "education", "contact"];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -294,6 +330,7 @@ export default function ResumePage() {
               { id: "about", label: "关于" },
               { id: "experience", label: "经历" },
               { id: "skills", label: "技能" },
+              { id: "projects", label: "项目" },
               { id: "portfolio", label: "作品集" },
               { id: "education", label: "教育" },
               { id: "contact", label: "联系" }
@@ -406,24 +443,8 @@ export default function ResumePage() {
             </div>
           </div>
 
-          {/* AI工具优势 */}
-          <div className="reveal delay-300 mb-12 p-8 border border-[var(--gold)]/20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--gold)]/5 to-transparent" />
-            <div className="relative">
-              <div className="flex items-center gap-3 mb-4">
-                <Cpu className="w-5 h-5 text-[var(--gold)]" />
-                <h4 className="text-xs tracking-[0.2em] uppercase text-[var(--gold)]">
-                  AI工具赋能
-                </h4>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                熟练运用AI工具提升工作效率，包括：AI生成营销文案与创意脚本、AI图像创作与品牌视觉设计、AI视频制作（如吉卜力风格短片）、AI数据分析与洞察报告。将传统品牌营销与AI技术深度融合，打造差异化竞争优势。
-              </p>
-            </div>
-          </div>
-
           {/* 数据统计 */}
-          <div className="reveal delay-400 grid grid-cols-4 gap-4">
+          <div className="reveal delay-300 grid grid-cols-4 gap-4">
             {resumeData.stats.map((stat, i) => (
               <div key={i} className="text-center p-6 border border-border/50 hover:border-[var(--gold)]/30 transition-colors">
                 <p className="font-serif text-3xl text-[var(--gold)] mb-1">{stat.value}</p>
@@ -466,6 +487,23 @@ export default function ResumePage() {
                   ))}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 精选项目 */}
+      <section id="projects" className="py-32 md:py-40 px-8 bg-secondary/[0.03]">
+        <div className="max-w-4xl mx-auto">
+          <div className="reveal">
+            <div className="flex items-center gap-3">
+              <Briefcase className="w-6 h-6 text-[var(--gold)]" />
+              <SectionTitle subtitle="Projects">精选项目</SectionTitle>
+            </div>
+          </div>
+          <div className="reveal delay-100 grid md:grid-cols-2 gap-6">
+            {resumeData.projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
             ))}
           </div>
         </div>
