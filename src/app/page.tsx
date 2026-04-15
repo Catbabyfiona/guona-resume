@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Mail, Phone, MapPin, Globe, ExternalLink, Calendar, ChevronDown, Award, Users, TrendingUp, Rocket } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink, Calendar, ChevronDown, Award, Users, Rocket, Sparkles, FileText, Video } from "lucide-react";
 
 // 简历数据 - 郭娜
 const resumeData = {
@@ -21,13 +21,13 @@ const resumeData = {
     "上市辅导与资本对接",
     "IP资产孵化与内容创新",
     "跨界整合与项目管理",
-    "团队构建与组织发展"
+    "AI工具赋能效率提升"
   ],
   stats: [
     { value: "15+", label: "年经验" },
     { value: "6+", label: "家公司" },
     { value: "千万级", label: "标杆项目" },
-    { value: "5000万+", label: "年营业额" }
+    { value: "AI+", label: "效率提升" }
   ],
   experience: [
     {
@@ -110,8 +110,54 @@ const resumeData = {
   skills: {
     "核心能力": ["品牌战略与整合营销", "企业战略与顶层设计", "上市辅导与资本对接", "IP资产孵化与内容创新"],
     "专业技能": ["品牌定位与重塑", "整合营销策划", "IP孵化运营", "危机公关处理", "团队建设管理"],
+    "AI工具应用": ["AI生成文案策划", "AI图像创作", "AI视频制作", "AI数据分析", "AI效率工具链"],
     "工具技能": ["PPT/Word/Excel", "品牌数据分析", "项目管理", "预算管理"]
-  }
+  },
+  // 作品集
+  portfolio: [
+    {
+      title: "AI创意短片",
+      subtitle: "吉卜力猫咪田园",
+      description: "运用AI视频生成工具创作的品牌创意短片，展示田园猫咪治愈风格，应用于品牌内容营销与社交媒体传播。",
+      type: "video",
+      tags: ["AI视频", "创意内容", "品牌传播"]
+    },
+    {
+      title: "品牌战略规划",
+      subtitle: "小河狸创客战略规划方案",
+      description: "科技教育品牌全案战略规划，涵盖品牌定位、市场分析、传播策略与执行方案。",
+      type: "document",
+      tags: ["品牌战略", "全案策划", "教育科技"]
+    },
+    {
+      title: "年度品牌营销",
+      subtitle: "阖家燕年度线上品牌市场营销策划",
+      description: "燕窝品牌全年线上营销规划，整合电商、社交媒体、KOL合作等多渠道资源。",
+      type: "document",
+      tags: ["品牌营销", "电商运营", "KOL合作"]
+    },
+    {
+      title: "整合营销专案",
+      subtitle: "出口小方瓶整合营销专案",
+      description: "白酒品牌整合营销方案，包含品牌定位、创意策划、媒介投放与效果评估。",
+      type: "document",
+      tags: ["整合营销", "白酒品牌", "创意策划"]
+    },
+    {
+      title: "节庆活动策划",
+      subtitle: "二十四节气美食嘉年华策划方案",
+      description: "结合二十四节气传统文化的大型美食活动策划，线上线下联动传播。",
+      type: "document",
+      tags: ["活动策划", "传统文化", "节庆营销"]
+    },
+    {
+      title: "数字文化项目",
+      subtitle: "中华瑰宝数字文化节项目规划方案",
+      description: "数字文化IP项目整体规划，融合传统文化与现代科技，打造数字文化新体验。",
+      type: "document",
+      tags: ["数字文化", "IP打造", "文化创新"]
+    }
+  ]
 };
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -197,6 +243,43 @@ function ProjectCard({ name, description, tech, link }: { name: string; descript
   );
 }
 
+function PortfolioCard({ title, subtitle, description, type, tags }: { 
+  title: string; 
+  subtitle: string; 
+  description: string; 
+  type: string;
+  tags: string[];
+}) {
+  const IconComponent = type === 'video' ? Video : FileText;
+  
+  return (
+    <div className="group p-6 rounded-lg border border-border bg-card hover:border-[var(--gold)] hover:shadow-lg transition-all duration-300">
+      <div className="flex items-start gap-4 mb-4">
+        <div className="p-3 rounded-lg bg-[var(--gold)]/10 text-[var(--gold)]">
+          <IconComponent className="w-6 h-6" />
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-1">
+            <span className={`text-xs px-2 py-0.5 rounded ${type === 'video' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300' : 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300'}`}>
+              {type === 'video' ? '视频作品' : '策划文档'}
+            </span>
+          </div>
+          <h4 className="font-medium text-lg group-hover:text-[var(--gold)] transition-colors">{title}</h4>
+          <p className="text-sm text-[var(--gold)]">{subtitle}</p>
+        </div>
+      </div>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-4">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag, i) => (
+          <span key={i} className="text-xs px-2 py-1 rounded bg-secondary text-secondary-foreground">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function StatCard({ value, label, icon }: { value: string; label: string; icon: React.ReactNode }) {
   return (
     <div className="text-center p-6 rounded-lg bg-card border border-border">
@@ -228,7 +311,7 @@ export default function ResumePage() {
         }
       });
 
-      const sections = ["about", "experience", "skills", "projects", "education", "contact"];
+      const sections = ["about", "experience", "skills", "portfolio", "projects", "education", "contact"];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -268,6 +351,7 @@ export default function ResumePage() {
               { id: "about", label: "关于" },
               { id: "experience", label: "经历" },
               { id: "skills", label: "技能" },
+              { id: "portfolio", label: "作品集" },
               { id: "projects", label: "项目" },
               { id: "education", label: "教育" },
               { id: "contact", label: "联系" }
@@ -367,12 +451,25 @@ export default function ResumePage() {
             </div>
           </div>
 
+          {/* AI工具优势 */}
+          <div className="reveal delay-200 mb-12 p-6 rounded-lg bg-gradient-to-r from-[var(--gold)]/5 to-transparent border border-[var(--gold)]/20">
+            <div className="flex items-center gap-2 mb-3">
+              <Sparkles className="w-5 h-5 text-[var(--gold)]" />
+              <h4 className="text-sm font-medium uppercase tracking-wider text-[var(--gold)]">
+                AI工具赋能
+              </h4>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              熟练运用AI工具提升工作效率，包括：AI生成营销文案与创意脚本、AI图像创作与品牌视觉设计、AI视频制作（如吉卜力风格短片）、AI数据分析与洞察报告。善用AI工具链实现高效内容生产，将传统品牌营销与AI技术深度融合，打造差异化竞争优势。
+            </p>
+          </div>
+
           {/* 数据统计 */}
           <div className="reveal delay-300 grid grid-cols-2 md:grid-cols-4 gap-4">
             <StatCard value={resumeData.stats[0].value} label={resumeData.stats[0].label} icon={<Award className="w-6 h-6" />} />
             <StatCard value={resumeData.stats[1].value} label={resumeData.stats[1].label} icon={<Users className="w-6 h-6" />} />
             <StatCard value={resumeData.stats[2].value} label={resumeData.stats[2].label} icon={<Rocket className="w-6 h-6" />} />
-            <StatCard value={resumeData.stats[3].value} label={resumeData.stats[3].label} icon={<TrendingUp className="w-6 h-6" />} />
+            <StatCard value={resumeData.stats[3].value} label={resumeData.stats[3].label} icon={<Sparkles className="w-6 h-6" />} />
           </div>
         </div>
       </section>
@@ -416,7 +513,30 @@ export default function ResumePage() {
         </div>
       </section>
 
-      {/* 项目展示 */}
+      {/* 作品集 */}
+      <section id="portfolio" className="py-24 md:py-32 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="reveal">
+            <div className="flex items-center gap-3 mb-2">
+              <Sparkles className="w-8 h-8 text-[var(--gold)]" />
+              <SectionTitle>作品集</SectionTitle>
+            </div>
+            <SectionDivider />
+          </div>
+          <div className="reveal delay-100 mb-8">
+            <p className="text-lg text-muted-foreground">
+              整合营销策划案 / AI创意内容 / 品牌战略规划
+            </p>
+          </div>
+          <div className="reveal delay-200 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {resumeData.portfolio.map((item, index) => (
+              <PortfolioCard key={index} {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 精选项目 */}
       <section id="projects" className="py-24 md:py-32 px-6 bg-secondary/30">
         <div className="max-w-4xl mx-auto">
           <div className="reveal">
