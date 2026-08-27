@@ -143,12 +143,12 @@ const resumeData = {
     },
     {
       title: "节庆活动策划",
-      subtitle: "二十四节气美食嘉年华策划方案",
-      description: "结合二十四节气传统文化的大型美食活动策划，线上线下联动传播。",
+      subtitle: "这就是二十四节气嘉年华策划方案",
+      description: "结合二十四节气传统文化的大型嘉年华活动策划，线上线下联动传播。",
       type: "document",
       tags: ["活动策划", "传统文化", "节庆营销"],
-      link: "https://pan.baidu.com/s/1ou7FAyBhW5aIsPOqVh7thg",
-      pwd: "3mfh"
+      link: "https://pan.baidu.com/s/1FpxmVZaHhKZoiA3mA1kP5g",
+      pwd: "za7j"
     },
     {
       title: "数字文化项目",
