@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>郭娜 | 品牌市场总监</title>
+<meta name="description" content="15年品牌战略规划与企业综合管理经验，横跨文旅、科技、消费、投资等多行业，曾任上市筹备公司核心高管。精通品牌整合营销、企业顶层设计、上市辅导与资本对接。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23fff'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%230a0a0a' text-anchor='middle'%3E郭%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;700&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --background:#ffffff;
+  --foreground:#0a0a0a;
+  --gold:#b8860b;
+  --muted:#fafafa;
+  --muted-foreground:#525252;
+  --border:#e0e0e0;
+  --card:#ffffff;
+  --secondary:#f5f5f5;
+  --sans:"DM Sans","PingFang SC","Noto Sans SC","Microsoft YaHei",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --serif:"Cormorant Garamond","Noto Serif SC","Songti SC",ui-serif,Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family:var(--sans);
+  font-weight:400;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit}
+button{background:none;border:none;cursor:pointer;font-family:inherit}
+img{max-width:100%;display:block}
+
+.min-h-screen{min-height:100vh}
+.bg-background{background:var(--background)}
+.bg-foreground{background:var(--foreground)}
+.text-background{color:var(--background)}
+.text-foreground{color:var(--foreground)}
+.text-muted-foreground{color:var(--muted-foreground)}
+.font-serif{font-family:var(--serif)}
+.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.bg-secondary{background:var(--secondary)}
+
+/* ============ NAV ============ */
+nav.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(255,255,255,.9);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(224,224,224,.3);
+}
+.nav-inner{
+  max-width:1152px;margin:0 auto;
+  padding:20px 32px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-brand{font-family:var(--serif);font-size:20px;letter-spacing:.025em}
+.nav-menu{display:flex;align-items:center;gap:40px}
+.nav-menu button{
+  font-size:14px;letter-spacing:.025em;color:var(--muted-foreground);
+  transition:color .2s;
+}
+.nav-menu button:hover{color:var(--foreground)}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.hero-deco{position:absolute;inset:0;pointer-events:none}
+.hero-deco .l1{
+  position:absolute;top:80px;left:40px;width:1px;height:160px;
+  background:linear-gradient(to bottom,transparent,rgba(184,134,11,.2),transparent);
+}
+.hero-deco .l2{
+  position:absolute;top:160px;right:80px;height:1px;width:128px;
+  background:linear-gradient(to right,transparent,rgba(184,134,11,.1),transparent);
+}
+.hero-deco .b1{
+  position:absolute;bottom:128px;left:25%;width:192px;height:192px;border-radius:50%;
+  background:rgba(184,134,11,.02);filter:blur(48px);
+}
+.hero-deco .b2{
+  position:absolute;top:33%;right:25%;width:256px;height:256px;border-radius:50%;
+  background:rgba(184,134,11,.03);filter:blur(48px);
+}
+.hero-inner{
+  position:relative;z-index:10;text-align:center;padding:0 32px;max-width:768px;
+}
+.avatar-wrap{width:144px;height:144px;margin:0 auto 40px;position:relative}
+.avatar-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(184,134,11,.3)}
+.avatar-img{position:absolute;inset:8px;border-radius:50%;overflow:hidden}
+.avatar-img img{width:100%;height:100%;object-fit:cover}
+.avatar-corner-tr{position:absolute;top:-8px;right:-8px;width:32px;height:32px;border-top:1px solid rgba(184,134,11,.5);border-right:1px solid rgba(184,134,11,.5)}
+.avatar-corner-bl{position:absolute;bottom:-8px;left:-8px;width:32px;height:32px;border-bottom:1px solid rgba(184,134,11,.5);border-left:1px solid rgba(184,134,11,.5)}
+.hero-kicker{
+  font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;
+}
+.hero h1{
+  font-family:var(--serif);font-size:60px;font-weight:300;letter-spacing:-.025em;margin-bottom:24px;
+  line-height:1.1;
+}
+.hero-sub{
+  font-size:18px;color:var(--muted-foreground);letter-spacing:.025em;margin-bottom:48px;
+}
+.hero-contact{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:24px;font-size:14px;color:rgba(82,82,82,.7);
+}
+.hero-contact span{display:flex;align-items:center;gap:8px}
+.hero-contact svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
+.hero-scroll{margin-top:64px;display:flex;justify-content:center}
+.hero-scroll svg{width:24px;height:24px;color:rgba(82,82,82,.5);transition:color .2s}
+
+/* ============ SECTION ============ */
+section.section{padding:128px 32px}
+section.section.lg{padding:128px 32px}
+section.section.tint{background:rgba(245,245,245,.03)}
+.section-inner{max-width:768px;margin:0 auto}
+.section-inner.n4{max-width:896px}
+.section-inner.n5{max-width:1024px}
+.section-head{margin-bottom:32px}
+.section-head .icon{display:inline-flex;margin-right:12px;vertical-align:middle}
+.section-head .icon svg{width:24px;height:24px;color:var(--gold)}
+.section-head .tt{display:inline-block;vertical-align:middle}
+.section-head h2{
+  font-family:var(--serif);font-size:36px;font-weight:300;letter-spacing:.025em;color:var(--foreground);
+  line-height:1.2;
+}
+.section-head .en{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+
+/* ============ ABOUT ============ */
+.about-text{
+  font-size:18px;line-height:1.8;color:rgba(82,82,82,.9);margin-bottom:48px;font-weight:300;
+}
+.about-label{
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;
+}
+.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px}
+.about-item{display:flex;align-items:center;gap:12px;font-size:14px}
+.about-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{padding:24px;text-align:center;border:1px solid rgba(224,224,224,.5);transition:border-color .3s}
+.stat:hover{border-color:rgba(184,134,11,.3)}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;color:var(--gold);margin-bottom:4px;line-height:1.2}
+.stat span{font-size:12px;color:var(--muted-foreground);letter-spacing:.025em}
+
+/* ============ EXPERIENCE ============ */
+.timeline{}
+.titem{position:relative;padding-left:32px;padding-bottom:40px}
+.titem:last-child{padding-bottom:0}
+.titem::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom,var(--gold),rgba(184,134,11,.2));
+}
+.titem:last-child::before{display:none}
+.titem .dot{position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateX(-50%)}
+.tdate{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:rgba(184,134,11,.7);margin-bottom:4px;display:block}
+.titem h3{font-family:var(--serif);font-size:20px;margin-bottom:4px;transition:color .2s}
+.titem:hover h3{color:var(--gold)}
+.trole{font-size:14px;color:var(--muted-foreground);margin-bottom:12px}
+.tdesc{font-size:14px;color:rgba(82,82,82,.8);line-height:1.7;margin-bottom:16px}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px}
+.tag-gold{font-size:12px;padding:4px 12px;border:1px solid rgba(184,134,11,.3);color:rgba(184,134,11,.8);border-radius:0}
+
+/* ============ SKILLS ============ */
+.skills-wrap{display:flex;flex-direction:column;gap:40px}
+.skills-group h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.skills-pills{display:flex;flex-wrap:wrap;gap:12px}
+.pill{font-size:14px;padding:8px 16px;border:1px solid var(--border);border-radius:0;cursor:default;transition:border-color .2s,color .2s}
+.pill:hover{border-color:rgba(184,134,11,.5)}
+
+/* ============ PROJECTS ============ */
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.pcard{background:var(--card);border:1px solid var(--border);padding:32px;transition:border-color .5s}
+.pcard:hover{border-color:var(--gold)}
+.pcard h4{font-family:var(--serif);font-size:18px;margin-bottom:12px;transition:color .2s}
+.pcard:hover h4{color:var(--gold)}
+.pcard .desc{font-size:14px;color:var(--muted-foreground);line-height:1.7;margin-bottom:24px}
+.pcard .tagrow{display:flex;flex-wrap:wrap;gap:8px}
+.pcard .tag{font-size:12px;padding:4px 12px;border:1px solid rgba(224,224,224,.5);color:var(--muted-foreground)}
+
+/* ============ PORTFOLIO ============ */
+.portfolio-note{font-size:14px;color:var(--muted-foreground);margin-bottom:48px;letter-spacing:.025em}
+.portfolio-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:24px}
+.work{
+  position:relative;overflow:hidden;background:var(--card);border:1px solid var(--border);
+  transition:border-color .5s;cursor:pointer;display:block;
+}
+.work:hover{border-color:var(--gold)}
+.work .wline{
+  position:absolute;top:0;left:0;width:100%;height:4px;
+  background:linear-gradient(to right,var(--gold),rgba(184,134,11,.5),transparent);
+  transform:translateX(-100%);transition:transform .5s;
+}
+.work:hover .wline{transform:translateX(0)}
+.work-body{padding:32px}
+.wtop{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.wicon{padding:12px;display:flex}
+.wicon.video{background:rgba(139,92,246,.1)}
+.wicon.doc{background:rgba(184,134,11,.1)}
+.wicon svg{width:24px;height:24px}
+.wicon.video svg{color:#8b5cf6}
+.wicon.doc svg{color:var(--gold)}
+.wtype{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-foreground)}
+.work h4{font-family:var(--serif);font-size:18px;margin-bottom:4px;transition:color .2s}
+.work:hover h4{color:var(--gold)}
+.work .wsub{font-size:14px;color:var(--gold);margin-bottom:16px}
+.work .wdesc{font-size:14px;color:var(--muted-foreground);line-height:1.7;margin-bottom:24px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.work .wtags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.work .wtag{font-size:12px;padding:4px 8px;background:rgba(250,250,250,.5);color:var(--muted-foreground)}
+.wfoot{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(224,224,224,.5)}
+.wcode{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted-foreground)}
+.wcode .val{font-family:ui-monospace,Menlo,monospace;color:var(--gold)}
+.wgo{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted-foreground);transition:color .2s}
+.wgo svg{width:12px;height:12px;transition:transform .2s}
+.work:hover .wgo{color:var(--gold)}
+.work:hover .wgo svg{transform:translateX(4px)}
+
+/* ============ EDUCATION ============ */
+.edu{border-left:1px solid rgba(184,134,11,.3);padding-left:24px}
+.edu h4{font-family:var(--serif);font-size:20px;margin-bottom:4px}
+.edu .edyear{font-size:14px;color:var(--gold)}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--foreground);color:var(--background);padding:128px 32px;text-align:center}
+.contact .c-wrap{max-width:768px;margin:0 auto}
+.contact .ckicker{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.contact h2{font-family:var(--serif);font-size:48px;font-weight:300;margin-bottom:32px;line-height:1.2}
+.contact .csub{font-size:18px;color:var(--muted-foreground);margin-bottom:48px}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px}
+.contact-links a{display:flex;align-items:center;gap:12px;font-size:18px;transition:color .2s}
+.contact-links a:hover{color:var(--gold)}
+.contact-links svg{width:20px;height:20px}
+.contact-place{display:flex;align-items:center;justify-content:center;gap:12px;font-size:14px;color:rgba(82,82,82,.6)}
+.contact-place svg{width:16px;height:16px}
+
+/* ============ FOOTER ============ */
+footer.footer{padding:32px;border-top:1px solid rgba(224,224,224,.3)}
+.foot-inner{max-width:1152px;margin:0 auto;display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:space-between;font-size:12px;color:rgba(82,82,82,.5)}
+.foot-inner .yr{display:flex;align-items:center;gap:8px}
+.foot-inner svg{width:12px;height:12px}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.delay-100{transition-delay:.1s}
+.delay-200{transition-delay:.2s}
+.delay-300{transition-delay:.3s}
+.delay-400{transition-delay:.4s}
+.delay-500{transition-delay:.5s}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width:768px){
+  .hero h1{font-size:96px}
+  .hero-sub{font-size:20px}
+  .about-grid{grid-template-columns:repeat(3,1fr)}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  section.section{padding:160px 32px}
+  .contact h2{font-size:60px}
+}
+@media (min-width:1024px){
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
+  .foot-inner{flex-direction:row}
+}
+@media (max-width:767px){
+  .nav-menu{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .contact-links{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="min-h-screen bg-background">
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="nav-brand">郭娜</span>
+      <div class="nav-menu">
+        <button data-scroll="about">关于</button>
+        <button data-scroll="experience">经历</button>
+        <button data-scroll="skills">技能</button>
+        <button data-scroll="projects">项目</button>
+        <button data-scroll="portfolio">作品集</button>
+        <button data-scroll="education">教育</button>
+        <button data-scroll="contact">联系</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-deco">
+      <div class="l1"></div>
+      <div class="l2"></div>
+      <div class="b1"></div>
+      <div class="b2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="reveal">
+        <div class="avatar-wrap">
+          <div class="avatar-ring"></div>
+          <div class="avatar-img"><img src="assets/avatar.jpg" alt="郭娜"></div>
+          <div class="avatar-corner-tr"></div>
+          <div class="avatar-corner-bl"></div>
+        </div>
+      </div>
+      <div class="reveal delay-100">
+        <p class="hero-kicker">Brand Strategy &amp; Marketing Director</p>
+      </div>
+      <h1 class="reveal delay-200 font-serif">郭娜</h1>
+      <p class="reveal delay-300 hero-sub">品牌市场总监</p>
+      <div class="reveal delay-400 hero-contact">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>北京市</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>755360966@qq.com</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>13120250250</span>
+      </div>
+      <div class="reveal delay-500 hero-scroll">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 01 关于我 ============ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="reveal section-head">
+        <h2>关于我</h2>
+        <p class="en">About</p>
+      </div>
+      <p class="reveal delay-100 about-text">15年品牌战略规划与企业综合管理经验，横跨文旅、科技、消费、投资等多行业，曾任上市筹备公司核心高管，具备从0到1构建品牌、团队与业务体系的实战能力。精通品牌整合营销、企业顶层设计、上市辅导与资本对接，擅长以市场为导向驱动企业增长。累计打造多个年销超千万/千万级中标额的标杆项目。</p>
+      <div class="reveal delay-200" style="margin-bottom:48px">
+        <h4 class="about-label">核心优势</h4>
+        <div class="about-grid">
+          <div class="about-item"><span class="about-dot"></span><span>品牌战略与整合营销</span></div>
+          <div class="about-item"><span class="about-dot"></span><span>企业战略与顶层设计</span></div>
+          <div class="about-item"><span class="about-dot"></span><span>上市辅导与资本对接</span></div>
+          <div class="about-item"><span class="about-dot"></span><span>IP资产孵化与内容创新</span></div>
+          <div class="about-item"><span class="about-dot"></span><span>跨界整合与项目管理</span></div>
+          <div class="about-item"><span class="about-dot"></span><span>AI工具应用</span></div>
+        </div>
+      </div>
+      <div class="reveal delay-300 stats">
+        <div class="stat"><b>15+</b><span>年经验</span></div>
+        <div class="stat"><b>千万级</b><span>标杆项目</span></div>
+        <div class="stat"><b>5000万+</b><span>年营业额</span></div>
+        <div class="stat"><b>187万+</b><span>互动曝光</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 工作经历 ============ -->
+  <section class="section tint" id="experience">
+    <div class="section-inner">
+      <div class="reveal section-head">
+        <h2>工作经历</h2>
+        <p class="en">Experience</p>
+      </div>
+      <div class="reveal delay-100 timeline">
+
+        <div class="titem">
+          <span class="dot"></span>
+          <span class="tdate">2022.01 — 至今</span>
+          <h3>北京分享时代科技股份有限公司</h3>
+          <p class="trole">品牌市场总监</p>
+          <p class="tdesc">主导集团品牌体系建设与整合营销策略，负责品牌定位、IP内容创意、传播策划与市场推广，推动品牌与业务深度融合。牵头整合集团多核心部门，制定年度品牌规划，对接资本市场，助力企业上市筹备。</p>
+          <div class="tag-row">
+            <span class="tag-gold">上市筹备</span><span class="tag-gold">品牌体系</span><span class="tag-gold">IP孵化</span><span class="tag-gold">资本对接</span>
+          </div>
+        </div>
+
+        <div class="titem">
+          <span class="dot"></span>
+          <span class="tdate">2021.03 — 2021.12</span>
+          <h3>北京互动时代网络技术有限公司</h3>
+          <p class="trole">市场品牌总监</p>
+          <p class="tdesc">主导品牌定位、视觉体系搭建与O2O商业模式研究，建立标准化品牌管理体系。通过社群运营与数据分析，提升平台用户粘性及转化效率。依托环球梦工场IP图库主导衍生品开发，实现IP商业化多元延展。</p>
+          <div class="tag-row">
+            <span class="tag-gold">品牌定位</span><span class="tag-gold">社群运营</span><span class="tag-gold">IP商业化</span><span class="tag-gold">O2O模式</span>
+          </div>
+        </div>
+
+        <div class="titem">
+          <span class="dot"></span>
+          <span class="tdate">2019.09 — 2021.02</span>
+          <h3>小方瓶 (北京) 酒业有限公司</h3>
+          <p class="trole">品牌市场总监</p>
+          <p class="tdesc">负责燕窝饮料、国潮好酒品牌全案体系建设与运营，开展商业模式研究，制定品牌各业务板块战略方案。策划执行大型品牌活动，打造社会热点事件，拉动品牌影响力与目标人群渗透。</p>
+          <div class="tag-row">
+            <span class="tag-gold">品牌全案</span><span class="tag-gold">国潮文化</span><span class="tag-gold">热点事件</span><span class="tag-gold">渠道营销</span>
+          </div>
+        </div>
+
+        <div class="titem">
+          <span class="dot"></span>
+          <span class="tdate">2015.11 — 2019.06</span>
+          <h3>北京莱鹏纳通文化传媒有限公司</h3>
+          <p class="trole">品牌战略负责人</p>
+          <p class="tdesc">聚焦农合农副产品发展战略，主导企业自有品牌IP孵化与品牌建设管理，协助拓展农副产品市场。搭建自媒体平台矩阵，制定社会化传播策略，实现品牌差异化竞争。</p>
+          <div class="tag-row">
+            <span class="tag-gold">IP孵化</span><span class="tag-gold">自媒体矩阵</span><span class="tag-gold">扶贫项目</span><span class="tag-gold">内容营销</span>
+          </div>
+        </div>
+
+        <div class="titem">
+          <span class="dot"></span>
+          <span class="tdate">2013.08 — 2015.10</span>
+          <h3>八零印象</h3>
+          <p class="trole">客户总监</p>
+          <p class="tdesc">负责项目前期与客户端沟通，制定营销规划和创意产出。快速诊断品牌问题，建立动态品牌模型，制定定位战略，为品牌占据细分行业第一地位提供品牌策划与设计服务。</p>
+          <div class="tag-row">
+            <span class="tag-gold">品牌诊断</span><span class="tag-gold">整合营销</span><span class="tag-gold">策略咨询</span><span class="tag-gold">创意策划</span>
+          </div>
+        </div>
+
+        <div class="titem">
+          <span class="dot"></span>
+          <span class="tdate">2009.09 — 2013.07</span>
+          <h3>北京灵智精锐整合营销顾问有限公司</h3>
+          <p class="trole">客户总监</p>
+          <p class="tdesc">对接客户需求，开展品牌、市场、竞争环境研究，制定整合营销规划与创意推广方案。为蒙牛、宝洁、中粮等TOP级品牌提供全年整合营销服务，落地新品上市、线下巡展等活动。</p>
+          <div class="tag-row">
+            <span class="tag-gold">整合营销</span><span class="tag-gold">品牌策略</span><span class="tag-gold">活动执行</span><span class="tag-gold">客户管理</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 专业技能 ============ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="reveal section-head">
+        <h2>专业技能</h2>
+        <p class="en">Skills</p>
+      </div>
+      <div class="reveal delay-100 skills-wrap">
+        <div class="skills-group">
+          <h4>核心能力</h4>
+          <div class="skills-pills">
+            <span class="pill">品牌战略与整合营销</span>
+            <span class="pill">企业战略与顶层设计</span>
+            <span class="pill">上市辅导与资本对接</span>
+            <span class="pill">IP资产孵化与内容创新</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>专业技能</h4>
+          <div class="skills-pills">
+            <span class="pill">品牌定位与重塑</span>
+            <span class="pill">整合营销策划</span>
+            <span class="pill">IP孵化运营</span>
+            <span class="pill">危机公关处理</span>
+            <span class="pill">团队建设管理</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>工具技能</h4>
+          <div class="skills-pills">
+            <span class="pill">PPT / Word / Excel</span>
+            <span class="pill">品牌数据分析</span>
+            <span class="pill">项目管理</span>
+            <span class="pill">预算管理</span>
+            <span class="pill">AI工具应用</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 精选项目 ============ -->
+  <section class="section tint" id="projects">
+    <div class="section-inner n4">
+      <div class="reveal section-head">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span>
+        <span class="tt"><h2>精选项目</h2><p class="en">Projects</p></span>
+      </div>
+      <div class="reveal delay-100 projects-grid">
+        <div class="pcard">
+          <h4>阖家燕品牌战略体系打造</h4>
+          <p class="desc">完成全新阖家燕品牌从0到1的战略体系打造，制定品牌定位、包装策略、推广策略，拓展品牌推广渠道，策划公众营销事件。</p>
+          <div class="tagrow"><span class="tag">品牌定位</span><span class="tag">包装设计</span><span class="tag">营销策划</span><span class="tag">渠道拓展</span></div>
+        </div>
+        <div class="pcard">
+          <h4>「醉美老板娘」国潮好酒社会化传播</h4>
+          <p class="desc">将传统白酒与「国潮文化」结合，打造差异化品牌定位。策划「醉美老板娘」社会化事件，显著提升品牌在目标人群中的渗透率与知名度。</p>
+          <div class="tagrow"><span class="tag">国潮IP</span><span class="tag">事件营销</span><span class="tag">社会化传播</span><span class="tag">品牌升级</span></div>
+        </div>
+        <div class="pcard">
+          <h4>农副产品自媒体矩阵与扶贫项目</h4>
+          <p class="desc">打造农业类短视频内容体系，运营微信公众号、抖音、微博等账号。7天内销售22万斤大米，销售额达150万元，消化当地村当年1/3产量。</p>
+          <div class="tagrow"><span class="tag">内容矩阵</span><span class="tag">短视频运营</span><span class="tag">直播带货</span><span class="tag">扶贫项目</span></div>
+        </div>
+        <div class="pcard">
+          <h4>蒙牛真果粒酸奶新品上市整合营销</h4>
+          <p class="desc">围绕蒙牛真果粒酸奶新品，策划线上线下整合营销活动（明星见面会、粉丝季、大型巡展、网红直播等），提升产品市场占有率。</p>
+          <div class="tagrow"><span class="tag">新品上市</span><span class="tag">整合营销</span><span class="tag">KOL合作</span><span class="tag">线下活动</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 作品集 ============ -->
+  <section class="section tint" id="portfolio">
+    <div class="section-inner n5">
+      <div class="reveal section-head">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
+        <span class="tt"><h2>作品集</h2><p class="en">Portfolio</p></span>
+      </div>
+      <p class="reveal delay-100 portfolio-note">点击卡片直接跳转到百度网盘，提取码已自动填充</p>
+      <div class="reveal delay-200 portfolio-grid">
+
+        <a class="work" href="https://pan.baidu.com/s/1g08QbFMHsTPghSX57pDFTw?pwd=23mz" target="_blank" rel="noopener">
+          <div class="wline"></div>
+          <div class="work-body">
+            <div class="wtop">
+              <div class="wicon video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
+              <span class="wtype">Video</span>
+            </div>
+            <h4>AI创意短片</h4>
+            <p class="wsub">吉卜力猫咪田园</p>
+            <p class="wdesc">运用AI视频生成工具创作的品牌创意短片，展示田园猫咪治愈风格，应用于品牌内容营销与社交媒体传播。</p>
+            <div class="wtags"><span class="wtag">AI视频</span><span class="wtag">创意内容</span><span class="wtag">品牌传播</span></div>
+            <div class="wfoot">
+              <div class="wcode"><span>提取码</span><span class="val">23mz</span></div>
+              <div class="wgo"><span>查看详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://pan.baidu.com/s/1bsrXmeoiNdSL3MAnpmdgRA?pwd=kbey" target="_blank" rel="noopener">
+          <div class="wline"></div>
+          <div class="work-body">
+            <div class="wtop">
+              <div class="wicon doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+              <span class="wtype">Document</span>
+            </div>
+            <h4>品牌战略规划</h4>
+            <p class="wsub">小河狸创客战略规划方案</p>
+            <p class="wdesc">科技教育品牌全案战略规划，涵盖品牌定位、市场分析、传播策略与执行方案。</p>
+            <div class="wtags"><span class="wtag">品牌战略</span><span class="wtag">全案策划</span><span class="wtag">教育科技</span></div>
+            <div class="wfoot">
+              <div class="wcode"><span>提取码</span><span class="val">kbey</span></div>
+              <div class="wgo"><span>查看详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://pan.baidu.com/s/18342pdw9JiqH-euoplLprw?pwd=hihy" target="_blank" rel="noopener">
+          <div class="wline"></div>
+          <div class="work-body">
+            <div class="wtop">
+              <div class="wicon doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+              <span class="wtype">Document</span>
+            </div>
+            <h4>年度品牌营销</h4>
+            <p class="wsub">阖家燕年度线上品牌市场营销策划</p>
+            <p class="wdesc">燕窝品牌全年线上营销规划，整合电商、社交媒体、KOL合作等多渠道资源。</p>
+            <div class="wtags"><span class="wtag">品牌营销</span><span class="wtag">电商运营</span><span class="wtag">KOL合作</span></div>
+            <div class="wfoot">
+              <div class="wcode"><span>提取码</span><span class="val">hihy</span></div>
+              <div class="wgo"><span>查看详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://pan.baidu.com/s/1F6HFZXjRJhwLQ_rz9arzeQ?pwd=e6sq" target="_blank" rel="noopener">
+          <div class="wline"></div>
+          <div class="work-body">
+            <div class="wtop">
+              <div class="wicon doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+              <span class="wtype">Document</span>
+            </div>
+            <h4>整合营销专案</h4>
+            <p class="wsub">出口小方瓶整合营销专案</p>
+            <p class="wdesc">白酒品牌整合营销方案，包含品牌定位、创意策划、媒介投放与效果评估。</p>
+            <div class="wtags"><span class="wtag">整合营销</span><span class="wtag">白酒品牌</span><span class="wtag">创意策划</span></div>
+            <div class="wfoot">
+              <div class="wcode"><span>提取码</span><span class="val">e6sq</span></div>
+              <div class="wgo"><span>查看详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://pan.baidu.com/s/1FpxmVZaHhKZoiA3mA1kP5g?pwd=za7j" target="_blank" rel="noopener">
+          <div class="wline"></div>
+          <div class="work-body">
+            <div class="wtop">
+              <div class="wicon doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+              <span class="wtype">Document</span>
+            </div>
+            <h4>节庆活动策划</h4>
+            <p class="wsub">这就是二十四节气嘉年华策划方案</p>
+            <p class="wdesc">结合二十四节气传统文化的大型嘉年华活动策划，线上线下联动传播。</p>
+            <div class="wtags"><span class="wtag">活动策划</span><span class="wtag">传统文化</span><span class="wtag">节庆营销</span></div>
+            <div class="wfoot">
+              <div class="wcode"><span>提取码</span><span class="val">za7j</span></div>
+              <div class="wgo"><span>查看详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://pan.baidu.com/s/1ADBC9xJ3y0GDrOg8dlu5TA?pwd=tmke" target="_blank" rel="noopener">
+          <div class="wline"></div>
+          <div class="work-body">
+            <div class="wtop">
+              <div class="wicon doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+              <span class="wtype">Document</span>
+            </div>
+            <h4>数字文化项目</h4>
+            <p class="wsub">中华瑰宝数字文化节项目规划方案</p>
+            <p class="wdesc">数字文化IP项目整体规划，融合传统文化与现代科技，打造数字文化新体验。</p>
+            <div class="wtags"><span class="wtag">数字文化</span><span class="wtag">IP打造</span><span class="wtag">文化创新</span></div>
+            <div class="wfoot">
+              <div class="wcode"><span>提取码</span><span class="val">tmke</span></div>
+              <div class="wgo"><span>查看详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 教育背景 ============ -->
+  <section class="section" id="education">
+    <div class="section-inner">
+      <div class="reveal section-head">
+        <h2>教育背景</h2>
+        <p class="en">Education</p>
+      </div>
+      <div class="reveal delay-100 edu">
+        <h4>对外经济贸易大学</h4>
+        <p class="edyear">本科 · 2005 — 2009</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 联系 ============ -->
+  <section class="contact" id="contact">
+    <div class="c-wrap">
+      <div class="reveal">
+        <p class="ckicker">Contact</p>
+        <h2>期待交流</h2>
+      </div>
+      <p class="reveal delay-100 csub">感谢您的关注，欢迎与我联系</p>
+      <div class="reveal delay-200 contact-links">
+        <a href="mailto:755360966@qq.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>755360966@qq.com</a>
+        <a href="tel:13120250250"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>13120250250</a>
+      </div>
+      <div class="reveal delay-300 contact-place">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>北京市</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="foot-inner">
+      <p>郭娜 · 品牌市场总监</p>
+      <p class="yr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>2026</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// 导航滚动
+document.querySelectorAll('[data-scroll]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var id=this.getAttribute('data-scroll');
+    var el=document.getElementById(id);
+    if(el){el.scrollIntoView({behavior:'smooth'})}
+  });
+});
+// 滚动显现动画
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('visible')});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} });
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+
+</body>
+</html>
